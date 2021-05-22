@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Jk_Buh_Prof"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Карточки" Height="450" Width="800">
     <Grid>
-        
+        <Menu VerticalAlignment="Top" Height="17" Width="792">
+            <MenuItem Header="File">
+                <MenuItem Header="Exit" Click="ExitProgramm" />
+            </MenuItem>
+            <MenuItem Header="Edit data" Click="OpenEditForm"/>
+        </Menu>
     </Grid>
 </Window>

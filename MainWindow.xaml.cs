@@ -23,6 +23,27 @@ namespace Jk_Buh_Prof
         public MainWindow()
         {
             InitializeComponent();
+
+            DataTicket.examTickets.Add(new ExamTicket(1, 21));
+            DataTicket.examTickets[0].Question = "Вопрос на засыпку";
+            DataTicket.examTickets[0].Answer = new List<string> { "Ответ 1", "Ответ 2", "Ответ 3"};
+
+            DataTicket.examTickets.Add(new ExamTicket(1, 23));
+            DataTicket.examTickets[1].Question = "Вопрос на засыпку 2";
+            DataTicket.examTickets[1].Answer = new List<string> { "Ответ 1", "Ответ 2", "Ответ 3" };
+
         }
+
+        private void ExitProgramm(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void OpenEditForm(object sender, RoutedEventArgs e)
+        {
+            Window1 EditForm = new Window1();
+            EditForm.ShowDialog();
+        }
+
     }
 }

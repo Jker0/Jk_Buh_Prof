@@ -1,0 +1,51 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Jk_Buh_Prof"
+        xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="Jk_Buh_Prof.Window1"
+        mc:Ignorable="d"
+        Title="Window1" Height="451.956" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" MinWidth="100"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Разделы и вопросы" HorizontalAlignment="Left" FontWeight="Bold" />
+            <Button Grid.Row="1" Content="Добавить раздел" Click="Add_Sector" ></Button>
+            <Button Grid.Row="2" x:Name ="DelSelection"  Content="Удалить раздел и все вопросы в нем" Click="Dell_Sector" IsEnabled="False" ></Button>
+            <TreeView Grid.Row="3" x:Name="TreeQuestion" />
+        </Grid>
+        <Grid Grid.Row="0" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel>
+                <Label x:Name="HeadingQuestion"  Content="Вопрос "/>
+                <TextBox x:Name="Question"  Text="Введите текст вопроса" Height="155">
+                </TextBox>
+            </StackPanel>
+            <StackPanel x:Name="StackAnswer" Grid.Row="1">
+                <Label x:Name="HeadingAnswer" Content="Ответ "/>
+                <TextBox x:Name="AnswerDefault" Text="Введите текст ответа" />
+            </StackPanel>
+        </Grid>
+        <StackPanel Grid.Row="1" VerticalAlignment="Bottom">
+            <Button Content="Добавить вопрос" Click="Add_Question"></Button>
+            <Button x:Name="DellQuestion"  Content="Удалить вопрос" Click="Del_Question" IsEnabled="False"></Button>
+        </StackPanel>
+    </Grid>
+</Window>
